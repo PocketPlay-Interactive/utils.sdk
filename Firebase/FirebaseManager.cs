@@ -142,12 +142,12 @@ public class FirebaseManager : SingletonGlobal<FirebaseManager>
     public async UniTask InitializeAsync() 
     { 
         await UniTask.Yield();
-        LogSystem.Warning("FIREBASE is disabled. Add 'FIREBASE' to Scripting Define Symbols to enable.");
+        LogSystem.LogWarning("FIREBASE is disabled. Add 'FIREBASE' to Scripting Define Symbols to enable.");
     }
 #else
     public void InitializeAsync()
     {
-        LogSystem.Warning("FIREBASE is disabled. Add 'FIREBASE' to Scripting Define Symbols to enable.");
+        LogSystem.LogWarning("FIREBASE is disabled. Add 'FIREBASE' to Scripting Define Symbols to enable.");
     }
 #endif
     public void TrackingEvent(string eventName) { }
