@@ -1,7 +1,7 @@
 #if ADMOB
-using System.Collections;
-#endif
 using GoogleMobileAds.Api;
+#endif
+using System.Collections;
 using UnityEngine;
 
 public class AdmobInterstitalOpen : MonoBehaviour
