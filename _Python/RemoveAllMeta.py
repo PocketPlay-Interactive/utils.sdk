@@ -21,5 +21,6 @@ def remove_meta_files_and_empty_dirs(root_dir):
 				print(f"Không thể xoá folder {dirpath}: {e}")
 
 if __name__ == "__main__":
-	folder = os.path.dirname(os.path.abspath(__file__))
-	remove_meta_files_and_empty_dirs(folder)
+	script_dir = os.path.dirname(os.path.abspath(__file__))
+	parent_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
+	remove_meta_files_and_empty_dirs(parent_dir)
