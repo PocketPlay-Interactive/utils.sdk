@@ -1,5 +1,7 @@
+#if ADMOB
 using DG.Tweening;
 using JKit.Monetize.Ads;
+#endif
 using UnityEngine;
 using static AdManager;
 

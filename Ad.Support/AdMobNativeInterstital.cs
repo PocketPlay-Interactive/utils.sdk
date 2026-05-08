@@ -1,4 +1,6 @@
+#if ADMOB
 using JKit.Monetize.Ads;
+#endif
 using UnityEngine;
 using UnityEngine.Events;
 using static AdManager;
