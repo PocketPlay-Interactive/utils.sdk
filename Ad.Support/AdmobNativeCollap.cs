@@ -7,6 +7,7 @@ using static AdManager;
 
 public class AdmobNativeCollap : MonoBehaviour
 {
+#if ADMOB
     private NativeOverlay _nativeOverlayCollap;
     public AdState CollapseAdState = AdState.NotAvailable;
     [SerializeField] protected RectTransform collapseRectTransform;
@@ -86,4 +87,5 @@ public class AdmobNativeCollap : MonoBehaviour
         AdManager.I.ShowBanner();
         Debug.Log($"[AdManager] Native collapse Ad Hidden: {this.gameObject.name}");
     }
+#endif
 }
