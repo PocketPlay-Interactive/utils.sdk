@@ -7,6 +7,7 @@ using static AdManager;
 
 public class AdMobNativeInterstital : MonoBehaviour
 {
+#if ADMOB
     private NativeOverlay _nativeOverlayFullScreen;
     public AdState InterstitalAdState = AdState.NotAvailable;
     public AdShowState InterstitalAdShowState = AdShowState.None;
@@ -83,4 +84,5 @@ public class AdMobNativeInterstital : MonoBehaviour
             }
         });
     }
+#endif
 }
