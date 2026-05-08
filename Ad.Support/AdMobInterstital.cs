@@ -1,4 +1,6 @@
+#if ADMOB
 using GoogleMobileAds.Api;
+#endif
 using UnityEngine;
 using UnityEngine.Events;
 using static AdManager;
