@@ -138,11 +138,18 @@ public class FirebaseManager : SingletonGlobal<FirebaseManager>
 #else
     // Stub methods khi không có FIREBASE define
     public bool IsInitialized => false;
+#if UNI_TASK
     public async UniTask InitializeAsync() 
     { 
         await UniTask.Yield();
         LogSystem.Warning("FIREBASE is disabled. Add 'FIREBASE' to Scripting Define Symbols to enable.");
     }
+#else
+    public void InitializeAsync()
+    {
+        LogSystem.Warning("FIREBASE is disabled. Add 'FIREBASE' to Scripting Define Symbols to enable.");
+    }
+#endif
     public void TrackingEvent(string eventName) { }
     public void TrackingEvent(string eventName, params (string key, object value)[] parameters) { }
     public void TrackingAdsEvent(string eventName, string placement_id, string value) { }
